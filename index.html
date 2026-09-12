@@ -4,7 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ZynTaskAI: Turn Conversations Into Customers, Automatically</title>
+<meta name="description" content="ZynTaskAI answers every call, chat, DM and ad inquiry in seconds, follows up automatically, and books you more jobs. Free 30-min growth session for local businesses.">
+<link rel="canonical" href="https://zyntaskai.com/">
+<meta name="theme-color" content="#16a34a">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ZynTaskAI">
+<meta property="og:title" content="ZynTaskAI: Turn Conversations Into Customers, Automatically">
+<meta property="og:description" content="AI receptionist, follow-up and reviews for local businesses. Book a free growth session.">
+<meta property="og:url" content="https://zyntaskai.com/">
+<meta property="og:image" content="https://zyntaskai.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ZynTaskAI: Turn Conversations Into Customers, Automatically">
+<meta name="twitter:description" content="AI receptionist, follow-up and reviews for local businesses. Book a free growth session.">
+<meta name="twitter:image" content="https://zyntaskai.com/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"ZynTaskAI","url":"https://zyntaskai.com/","logo":"https://zyntaskai.com/logo.svg","contactPoint":{"@type":"ContactPoint","email":"abdallah@zyntaskai.com","contactType":"sales"}},{"@type":"WebSite","name":"ZynTaskAI","url":"https://zyntaskai.com/"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"My customers hate bots. Will this annoy them?","acceptedAnswer":{"@type":"Answer","text":"We don't build dumb bots. It answers like your best receptionist, admits when it doesn't know, and hands off to you instantly. Most customers never realize it's AI."}},{"@type":"Question","name":"What happens on the free call?","acceptedAnswer":{"@type":"Answer","text":"20 minutes auditing where your leads come from and leak, 10 minutes showing the exact system we'd install plus fixed price. You keep the roadmap even if you say no."}},{"@type":"Question","name":"How do we start?","acceptedAnswer":{"@type":"Answer","text":"Apply via the form, get a review within 24 hours, then a fit call and install within 14 days. Only 4 businesses onboarded per month."}}]}]}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXBXCEH3CM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXBXCEH3CM');
+</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Inter",sans-serif}
 body{background:#FAFAF9;color:#1a1a1a;line-height:1.65}
@@ -139,6 +162,6 @@ footer{text-align:center;padding:20px 0 50px;color:#aaa;font-size:13px}
 </div>
 <footer><div style="display:flex;justify-content:center;margin-bottom:12px"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64"><rect x="0" y="0" width="64" height="64" rx="15" fill="#111111"/><path d="M14 42 L26 30 L34 35 L48 20" fill="none" stroke="#4ade80" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M40 20 H48 V28" fill="none" stroke="#4ade80" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>ZynTaskAI.com © 2026. We turn conversations into customers.<br>Questions? Reply to any email. A human answers.</footer>
 </div>
-<script>document.getElementById('f').addEventListener('submit',async e=>{e.preventDefault();const form=e.target,btn=form.querySelector('button'),ok=document.getElementById('success'),err=document.getElementById('error');err.style.display='none';btn.disabled=true;btn.textContent='Sending…';try{const fd=new FormData(form);const data={name:(fd.get('name')||'').toString().trim(),email:(fd.get('email')||'').toString().trim(),message:(fd.get('message')||'').toString().trim()};const res=await fetch('https://n8n.myhren.ai/webhook/website-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});if(!res.ok)throw new Error('send failed');ok.style.display='block';btn.textContent='Session Requested ✓';form.querySelectorAll('input[name=name],input[name=email],textarea[name=message]').forEach(el=>el.value='');}catch(_){err.style.display='block';btn.disabled=false;btn.textContent='Request My Session →';}});</script>
+<script>document.getElementById('f').addEventListener('submit',async e=>{e.preventDefault();const form=e.target,btn=form.querySelector('button'),ok=document.getElementById('success'),err=document.getElementById('error');err.style.display='none';btn.disabled=true;btn.textContent='Sending…';try{const fd=new FormData(form);const data={name:(fd.get('name')||'').toString().trim(),email:(fd.get('email')||'').toString().trim(),message:(fd.get('message')||'').toString().trim()};const res=await fetch('https://n8n.myhren.ai/webhook/website-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});if(!res.ok)throw new Error('send failed');ok.style.display='block';btn.textContent='Session Requested ✓';if(window.gtag)gtag('event','generate_lead',{method:'website_form'});form.querySelectorAll('input[name=name],input[name=email],textarea[name=message]').forEach(el=>el.value='');}catch(_){err.style.display='block';btn.disabled=false;btn.textContent='Request My Session →';}});</script>
 </body>
 </html>
