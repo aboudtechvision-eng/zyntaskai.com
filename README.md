@@ -1,12 +1,12 @@
-# GrowAI — my-website.ai
+# ZynTaskAI: my-website.ai
 
-AI Growth Agency site (V2C — Story Edition).
+AI Growth Agency site (V2C Story Edition).
 Turn every conversation into revenue.
 
 ## Files
-- `index.html` — main landing page + booking form
-- `logo.svg` — full horizontal lockup
-- `favicon.svg` — square mark / tab icon
+- `index.html`: main landing page and booking form
+- `logo.svg`: full horizontal lockup
+- `favicon.svg`: square mark / tab icon
 
 ## Local preview
 Open `index.html` in a browser, or:
