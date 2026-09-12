@@ -128,18 +128,21 @@ footer{text-align:center;padding:20px 0 50px;color:#aaa;font-size:13px}
 <div id="book" class="form-card">
 <h2>Book your Free Growth Session 👇</h2>
 <p style="font-size:15px;color:#555">Tell us about your business. We’ll reply within 1 business day with times + a quick video audit of your funnel.</p>
-<form id="f">
-<label>Full name *</label><input required placeholder="Full name">
-<label>Email *</label><input required type="email" placeholder="you@business.com">
-<label>Business website / Google / Instagram *</label><input required placeholder="Link customers find you on">
-<label>Describe your business + biggest bottleneck *</label><textarea required placeholder="What you sell, team size, leads/mo, what happens when someone inquires today?..."></textarea>
-<label>What’s your #1 goal for next 90 days?</label><select><option>More booked appointments</option><option>Follow up without hiring</option><option>Revive old / dead leads</option><option>More Google reviews + repeat business</option></select>
+<form id="f" action="https://formsubmit.co/abdallah@zyntaskai.com" method="POST">
+<input type="hidden" name="_subject" value="New Growth Session Request – ZynTaskAI.com">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<input type="text" name="_honey" style="display:none">
+<label>Full name *</label><input required name="name" placeholder="Full name">
+<label>Email *</label><input required name="email" type="email" placeholder="you@business.com">
+<label>Describe your business + biggest bottleneck *</label><textarea required name="message" placeholder="What you sell, team size, leads/mo, what happens when someone inquires today?..."></textarea>
 <button class="btn" style="border:none;cursor:pointer;margin-top:20px" type="submit">Request My Session →</button>
 <div id="success">🎉 You're in! Check your inbox. Your audit and booking link is on the way.</div>
+<div id="error" style="display:none;background:#fee2e2;color:#991b1b;padding:16px;border-radius:10px;margin-top:18px;text-align:center;font-weight:600">⚠️ Something went wrong. Please email us directly at abdallah@zyntaskai.com</div>
 </form>
 </div>
 <footer><div style="display:flex;justify-content:center;margin-bottom:12px"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64"><rect x="0" y="0" width="64" height="64" rx="15" fill="#111111"/><path d="M14 42 L26 30 L34 35 L48 20" fill="none" stroke="#4ade80" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M40 20 H48 V28" fill="none" stroke="#4ade80" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>ZynTaskAI.com © 2026. We turn conversations into customers.<br>Questions? Reply to any email. A human answers.</footer>
 </div>
-<script>document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();document.getElementById('success').style.display='block';e.target.querySelector('button').textContent='Session Requested ✓';});</script>
+<script>document.getElementById('f').addEventListener('submit',async e=>{e.preventDefault();const form=e.target,btn=form.querySelector('button'),ok=document.getElementById('success'),err=document.getElementById('error');err.style.display='none';btn.disabled=true;btn.textContent='Sending…';try{const fd=new FormData(form);const data={name:(fd.get('name')||'').toString().trim(),email:(fd.get('email')||'').toString().trim(),message:(fd.get('message')||'').toString().trim(),_subject:(fd.get('_subject')||'New Growth Session Request').toString(),_template:'table',_captcha:'false'};const res=await fetch('https://formsubmit.co/ajax/abdallah@zyntaskai.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});await res.json().catch(()=>null);if(!res.ok)throw new Error('send failed');ok.style.display='block';btn.textContent='Session Requested ✓';form.querySelectorAll('input[name=name],input[name=email],textarea[name=message]').forEach(el=>el.value='');}catch(_){err.style.display='block';btn.disabled=false;btn.textContent='Request My Session →';}});</script>
 </body>
 </html>
